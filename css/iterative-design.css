@@ -1,0 +1,55 @@
+.proj-page-contents {
+    width: 67%;
+}
+
+.main-contents, footer {
+    font-size: 1.13em;
+}
+
+.main-contents h3 {
+    margin-left: 0
+}
+
+.main-contents section {
+    margin-top: 1.13em;
+}
+
+.section-contents {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.design-step {
+    padding-top: 1em;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.carousel img {
+    height: 70vh;
+    object-fit: contain;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px
+}
+
+.carousel-control-prev, .carousel-control-next, .carousel-caption {
+    color: darkgray;
+}
+
+.carousel-control-prev, .carousel-control-next, .carousel-indicators {
+    filter: invert(100%);
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    color: black;
+}
+
+.carousel-control-next {
+    /*right: -30px;*/
+}
+
