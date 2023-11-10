@@ -63,8 +63,8 @@
     <section>
         <h3>Engineering</h3>
         <div class="design-step">
-        <p>The lattice has been divided into a grid system, each
-            block would be computed on its individual thread.</p>
+        <p>The lattice has been divided into a grid system, to allow
+            for multi-thread computations.</p>
         <div class="row align-items-center">
             <div class="col-md-12">
                 <img class="center-block img-fluid border border-dark"
@@ -73,9 +73,7 @@
         </div>
         <p>The code reindexes any point on the grid into each thread's
             proprietory memory if it is in the blue region, any point
-            into shared memory if it is in the red region. At the minimum,
-            the simulation can operate on two threads at the same time, leading to a
-            constant-factor speedup.</p>
+            into shared memory if it is in the red region. </p>
         </div>
 
         <div class="design-step">
