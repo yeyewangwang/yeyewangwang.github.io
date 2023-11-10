@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Ye Wang</title>
+    <link rel="stylesheet" href="./personas/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/index.css">
+    <link rel="stylesheet" type="text/css"
+          href="css/iterative-design.css">
+    <meta name="description" content="Assignment 1 Writeup">
+</head>
+<body>
+<div class="banner-bar">
+    <br>
+    <h2>Ye Wang</h2>
+    <h3>Building numerical software, research across disciplinary boundaries. </h3>
+    <br>
+
+    <ul class="nav">
+        <li class="nav-button"><a href="./index.html">Work</a></li>
+        <li class="nav-button"><a href="./about.html">About</a>
+        </li>
+    </ul>
+</div>
+
+<section class="container main-contents proj-page-contents">
+    <section>
+        <h1>Research Highlights</h1>
+    </section>
+
+    <section>
+        <h3>Context</h3>
+        <p>The Ising model was created nearly 100 years ago as a
+        universal model to study phase transitions and the formation
+        of patterns during such events. Hugo Duminil-Copin won 2022 Fields Medal
+        for proving that phase transitions exist only in the dimensions of 2, 3 and 4.</p>
+    </section>
+
+    <section>
+        <h3>The Science</h3>
+        <p>Each particle has a fixed number of "neighbors". Changing one particle
+        implies changing its interation with all neighbors, which recursively impacts
+        2nd degree neighbors (this is also a reason this topic is intrigueingly computational). Higher dimension typically implies larger number of neighbors;
+        however, it is possible to pack more neighbors in a lower dimension.</p>
+
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <img class="center-block img-fluid border border-dark"
+                             src="./images/monte_carlo/hex_steps=10_temp=3_7.png">
+            </div>
+        </div>
+        <p>In the above 2-D figure, each particle has 6 neighbors, same as in 3-D where
+            each particle can be seen as a cube with 6 faces and thus 6 neighbors. The
+            number of neighbors is the same, but simulations in this study show that phase
+        transitions happen at a lower temperature in the 2-D figure.</p>
+    </section>
+
+    <section>
+        <h3>Engineering</h3>
+        <div class="design-step">
+        <p>The lattice has been divided into a grid system, each
+            block would be computed on its individual thread.</p>
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <img class="center-block img-fluid border border-dark"
+                             src="./images/monte_carlo/blocks.png"/>
+            </div>
+        </div>
+        <p>The code reindexes any point on the grid into each thread's
+            proprietory memory if it is in the blue region, any point
+            into shared memory if it is in the red region. At the minimum,
+            the simulation can operate on two threads at the same time, leading to a
+            constant-factor speedup.</p>
+        </div>
+
+        <div class="design-step">
+        <p>In addition, it is now possible to snapshot the system half-way through
+            a simulation.</p>
+        </div>
+    </section>
+
+</section>
+
+</body>
+</html>

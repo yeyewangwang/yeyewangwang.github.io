@@ -16,12 +16,8 @@
     <script src="./js/bootstrap.min.js"
     ></script>
 </head>
-
 <!-- TODO: carousel at the bottom -->
-
 <body>
-
-
 <div class="banner-bar">
     <br>
     <h2>Ye Wang</h2>
@@ -34,28 +30,27 @@
         </li>
     </ul>
 </div>
-
 <div class="container main-contents proj-page-contents">
 
     <section>
-        <p>It is good to consistently test your own limits. Here is a running list of my limits as a machine learning engineer.</p>
+        <p>It is good to consistently test your own limits. Here is a running list of limits in machine learning engineering.</p>
 
-
-        <h3>Data Imbalance</h3>
+        <h3>Data imbalance</h3>
         <p>If your dataset is imbalanced, machine learning algorithms can trick you by always predicting the majority class. If you are telling cats from dogs, but you have only 1 cat image and 999 dog images in your dataset, the machine learning model can achieve a 99.9% accuracy by always predicting a dog.</p>
 
-<p>There’s nothing you can do with your model itself except for giving your minority datapoints more weight. Collect more data, generate effective synthetic data for the minority class, or sabotage your data-collecting efforts by downsampling your majority class.</p>
+        <p>There’s nothing you can do with your model itself except for giving your minority datapoints more weight, generate effective synthetic data for the minority class (e.g. with SMOTE), collect more data, or sabotage your data-collecting efforts by downsampling your majority class.</p>
 
-<p>When data imbalance occurs, think of this: there is always a real-world reason you end up collecting imbalanced data.  We live in a world with both the common and the rarer things. Build a baseline model by downsampling the majority class training data and start researching other tricks.</p>
+        <p>When data imbalance occurs, think of this: there is always a real-world reason you end up collecting imbalanced data.  We live in a world with both the common and the rarer things. Build a baseline model by downsampling the majority class training data and start researching other tricks.</p>
 
         <h3>Develop a better curve-fitting metric than MAE/MSE</h3>
         <p>The only occasion where you can find a better metric is dynamic time warping (DTW) for time-series data. This is not really a better “metric”, because DTW is in essence a numerical trick to make MAE/MSE pattern-match the small shifts along the time axis.</p>
 
+        <p>Generative networks, object detection systems, recommendation systems compose several metrics together. For instance, in an object detection system, the metric would be both whether the object's coordinate is correct and whether the size of the object is close enough. Combined metrics make these systems finicky to train. ML algorithms are hill-climbing algorithms, looking for that flat point on top of the hill. If you stack two hills together, there can be more "flat" points before you reach the top.
+        </p>
+
         <h3>Find out when a numerical algorithm has converged</h3>
         <p>This is a rare problem and this is a problem with a close fix. You can detect possible convergence but you cannot distinguish a true convergence from a quasi-convergence.</p>
     </section>
-
 </div>
-
 </body>
 </html>
