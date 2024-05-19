@@ -1,6 +1,6 @@
 ## Training Workload Optimization
 
-The primary goal for analyzing neural net memory properties is to train larger, higher-dimensional models on smaller GPU's for longer period of time.
+The primary goal for analyzing neural net memory properties is to train larger or higher-dimensional models on smaller GPU's for longer period of time.
 
 ### The Problem
 
