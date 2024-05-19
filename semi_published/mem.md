@@ -18,7 +18,7 @@ Attention scores dominate transformer intermediate results.
 
 Most tensors are used only when the forward passes reaches the layer, and after the backward pass reaches the layer. In other words, there is egregious waste in storing everything in VRAM, if the time to complete the round trip forward to calculate loss and then back to compute the gradient is greater than the time for loading or recomputing, and chip stalls caused by them. 
 
-Because the training workload is periodical and predictable, it's possible to benefit from overriding systems built-in optimizations (such as avoiding CPU logical cores, paging, or, cuDNN).
+Because the training workload is periodical and predictable, it's possible to benefit from overriding systems built-in optimizations (such as avoiding CPU logical cores, paging, or cuDNN).
 
 ### Strategies
 #### Trade compute for memory
